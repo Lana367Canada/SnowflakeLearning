@@ -35,9 +35,9 @@ jobs:
           SNOWFLAKE_PASSWORD: ${{ secrets.SK_PASSWORD }}
         run: |
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
-          C:\Users\UX508257\AppData\Local\Programs\Python\Python311\python --version
+          C:/Users/UX508257/AppData/Local/Programs/Python/Python311/python --version
           echo "Step 1: Installing schemachange"
-          C:\Users\UX508257\AppData\Local\Programs\Python\Python311\Scripts\pip install schemachange
+          C:/Users/UX508257/AppData/Local/Programs/Python/Python311/Scripts/pip install schemachange
           
           echo "Step 2: Running schemachange"
           schemachange -f $GITHUB_WORKSPACE/migrations -a $SK_ACCOUNT -u $SK_USERNAME -r $SK_ROLE -w $SK_WAREHOUSE -d $SK_DATABASE -c $SK_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
